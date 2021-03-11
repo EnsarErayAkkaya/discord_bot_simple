@@ -76,5 +76,5 @@ typings/
 .fusebox/
 
 # static data
-#dataset.json
+dataset.json
 config.env
