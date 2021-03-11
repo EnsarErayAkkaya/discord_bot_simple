@@ -1,6 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require("fs");
+const dotenv = require('dotenv');
+
+// Load env vars
+dotenv.config({ path: 'config.env' });
 
 //get static dataset for dialogues
 const filename = "dataset.json";
@@ -41,7 +45,7 @@ if(dataset != "error")
         }
     });
 
-    client.login(dataset.token);
+    client.login(process.env.token);
 }
 else{
     console.log("error at dataset");
